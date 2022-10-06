@@ -1,3 +1,6 @@
+# 미리보기 링크
+https://howwant.github.io/movie-web
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
