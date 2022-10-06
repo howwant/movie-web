@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
-import Movie from "./component/Movie";
-import styled from "styled-components";
+import Movie from "./Movie";
 
-class App extends React.Component {
+class Movies extends React.Component {
     state = {
         isLoading: true,
         movies: []
@@ -18,7 +17,7 @@ class App extends React.Component {
       render(){
        const {isLoading, movies} = this.state;
         return(
-        <MoviesStyled>
+        <div>
           {isLoading ? "Loading..." : movies.map(movie =>(
             <Movie
               key={movie.id}
@@ -30,18 +29,9 @@ class App extends React.Component {
               genres={movie.genres}
             />
           ))} 
-        </MoviesStyled>
-         );
-      };
+        </div>
+         ) 
+      }
 };
-const MoviesStyled = styled.div`
-  background: linear-gradient(#dee9fa, #dee5fa);
-  flex-wrap: wrap;
-  justify-content: space-between;
-  display: flex;
-  padding: 5%;
-  padding-top: 0;
-  margin: 0 auto;
-`;
 
-export default App;
+export default Movies;
