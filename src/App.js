@@ -1,47 +1,44 @@
 import React from "react";
-import axios from "axios";
-import Movie from "./component/Movie";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Navigation from "./components/Navigation";
+import Detail from "./routes/Detail";
+import Sidebar from "./components/Sidebar";
 
-class App extends React.Component {
-    state = {
-        isLoading: true,
-        movies: []
-      };
-      getMovies = async() =>{
-        const {data:{data:{movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
-        this.setState({movies, isLoading: false});
-      }
-      async  componentDidMount(){
-        this.getMovies();
-      }
-      render(){
-       const {isLoading, movies} = this.state;
-        return(
-        <MoviesStyled>
-          {isLoading ? "Loading..." : movies.map(movie =>(
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              year={movie.year}
-              title={movie.title}
-              summary={movie.summary}
-              poster={movie.medium_cover_image}
-              genres={movie.genres}
-            />
-          ))} 
-        </MoviesStyled>
-         );
-      };
+function App() {
+  return (
+      <BrowserRouter>
+        <Background>
+          <Warpper>
+            <Sidebar/>
+            <div className="Main">
+              <Navigation/>
+              <Routes>
+                <Route path="/" exact={true} element={<Home />} />
+                <Route path="/about" element={<About />}/>
+                <Route path="/movie/:id" element={<Detail/>} />
+              </Routes>
+            </div>
+          </Warpper>
+        </Background>
+    </BrowserRouter>
+  );
 };
-const MoviesStyled = styled.div`
-  background: linear-gradient(#dee9fa, #dee5fa);
-  flex-wrap: wrap;
-  justify-content: space-between;
-  display: flex;
-  padding: 5%;
-  padding-top: 0;
-  margin: 0 auto;
+const Background = styled.div`
+  background: linear-gradient(#dee9fa, #dee5fa);;
+  padding: 50px;
 `;
-
+const Warpper = styled.div`
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #666;
+  display: flex;
+  .Main {
+    background: #eee;
+    border-radius: 0 5px 5px 0;
+    width: 80%;
+  }
+`;
 export default App;

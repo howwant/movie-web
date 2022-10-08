@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-function Movie({year, title, summary, poster,genres}){
+function Movie({id, year, title, summary, poster,genres}){
     return (
       <MovieStyled>
+       <Link to={`/movie/${id}`} state={{ year, title, summary, poster, genres }} >
          <img src={poster} alt={title} />
          <div className="movie__data">
             <h3 className="movie__title">{title}
@@ -17,8 +19,9 @@ function Movie({year, title, summary, poster,genres}){
             </ul>
             <p className="movie__summary">{summary.length > 180 ? summary.slice(0,180)+'...':summary}</p>
          </div>
+      </Link>
       </MovieStyled>
-      );
+    );
   }
 Movie.propTypes ={
 	id: PropTypes.number.isRequired,
@@ -32,12 +35,19 @@ export default Movie;
 const MovieStyled = styled.div`
   padding: 20px;
   width: 45%;
-  display: flex;
   background-color: white;
-  align-items: flex-start;
   border-radius: 2px;
   margin-top: 70px;
   box-shadow: 0 0 10px #777;
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+  }
+  > a {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: #111;
+  }
   img {
     position: relative;
     top: -50px;
