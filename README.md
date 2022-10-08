@@ -1,6 +1,10 @@
 # 미리보기 링크
 https://howwant.github.io/movie-web
 
+# 참고 : 노마드코더
+: 영화링크와 연결, router, router에서 state 값 가져오기를 참고함
+: react-router-dom은 v6으로 작업함
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
