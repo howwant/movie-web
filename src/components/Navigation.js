@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function Navigation(){
     return <NavStyled>
-        <Link to="/">home</Link>
+        <Link to="/movie-web">home</Link>
         <Link to="/about">about</Link>
     </NavStyled>
 }

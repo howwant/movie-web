@@ -16,7 +16,7 @@ function App() {
             <div className="Main">
               <Navigation/>
               <Routes>
-                <Route path="/" exact={true} element={<Home />} />
+                <Route path="/movie-web" element={<Home />} />
                 <Route path="/about" element={<About />}/>
                 <Route path="/movie/:id" element={<Detail/>} />
               </Routes>
