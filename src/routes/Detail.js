@@ -39,8 +39,12 @@ const DetailStyled = styled.div`
         border-radius: 2px;
         box-shadow: 2px 2px 2px #666;
     }
+    .genres {
+        padding: 0;
+        list-style: none;
+    }
     .movie__data {
-        padding-left: 50px;
+        padding: 0 50px;
         width: 100%;
         background: #fff;
     }

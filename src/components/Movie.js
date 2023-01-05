@@ -17,7 +17,7 @@ function Movie({id, year, title, summary, poster,genres}){
               <li key={index} className="genres__genre">{genre}</li>
               ))}
             </ul>
-            <p className="movie__summary">{summary.length > 180 ? summary.slice(0,180)+'...':summary}</p>
+            <p className="movie__summary">{summary.length > 80 ? summary.slice(0,80)+'...':summary}</p>
          </div>
       </Link>
       </MovieStyled>
@@ -70,6 +70,7 @@ const MovieStyled = styled.div`
       list-style: none;
       color: #777;
       display: flex;
+      flex-wrap: wrap;
       li:not(:first-child)::before {
         content: " ,";
         display: inline-block;

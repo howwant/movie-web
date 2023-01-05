@@ -9,7 +9,9 @@ function About () {
     </AboutStyled>;
 };
 const AboutStyled = styled.div`
-    padding: 5%;
+    margin: 5%;
+    padding: 4%;
+    background: #fff;
     .Logo {
         font-weight: bold;
     }
