@@ -1,4 +1,4 @@
-# 미리보기 링크
+# 미리보기 링크 중단
 https://howwant.github.io/movie-web
 
 # 참고 : 노마드코더
