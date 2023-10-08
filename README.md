@@ -1,9 +1,10 @@
 # 참고 : 노마드코더
 : 영화링크와 연결, router, router에서 state 값 가져오기를 참고함 <br/>
 : react-router-dom은 v6으로 작업함
-<img width="1440" alt="스크린샷3" src="https://github.com/howwant/movie-web/assets/111282684/4390da10-fbbf-48c6-aca2-1d1f14be925f">
-<img width="1440" alt="스크린샷2" src="https://github.com/howwant/movie-web/assets/111282684/897810d9-8f30-4dc4-ab70-7cc530c52017">
+
 <img width="1440" alt="스크린샷1" src="https://github.com/howwant/movie-web/assets/111282684/d3dd21d1-57ac-4ded-820b-92e1c10726fd">
+<img width="1440" alt="스크린샷2" src="https://github.com/howwant/movie-web/assets/111282684/897810d9-8f30-4dc4-ab70-7cc530c52017">
+<img width="1440" alt="스크린샷3" src="https://github.com/howwant/movie-web/assets/111282684/4390da10-fbbf-48c6-aca2-1d1f14be925f">
 
 _____
 # Getting Started with Create React App
