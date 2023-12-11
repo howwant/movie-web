@@ -1,5 +1,5 @@
 # 참고 : 노마드코더
-: 영화링크와 연결, router, router에서 state 값 가져오기를 참고함 <br/>
+: 영화링크와 연결 연습입니다. router에서 state 값 가져옵니다. <br/>
 : react-router-dom은 v6으로 작업함
 
 <img width="1440" alt="스크린샷1" src="https://github.com/howwant/movie-web/assets/111282684/d3dd21d1-57ac-4ded-820b-92e1c10726fd">
